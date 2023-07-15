@@ -15,6 +15,7 @@ app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
 ## 2. Connect Cloud MongoDB
 ```js
 require("dotenv").config();
+const mongoose = require("mongoose");
 
 const DB_USERNAME = process.env.DB_USERNAME;
 const DB_PASSWORD = process.env.DB_PASSWORD;
