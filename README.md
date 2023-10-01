@@ -48,12 +48,14 @@ const Schema = mongoose.Schema
 const UserSchema = new Schema({
   username: {
     type: String,
-    required: true,
+    trim: true,
+    required: [true, 'Name must be required!'],
     unique: true,
   },
   password: {
     type: String,
-    required: true,
+    required: [true, 'Password must be required!'],
+    minLength: [6, 'Password must be at least 6 characters']
   },
   createdAt: {
     type: Date,
